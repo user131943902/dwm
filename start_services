@@ -1,3 +1,5 @@
 systemctl start NetworkManager.service
 systemctl start udisks2.service
 systemctl start udisks2
+systemctl enable --now bluetooth.service
+systemctl start blueoothctl.service
