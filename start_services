@@ -1,0 +1,3 @@
+systemctl start NetworkManager.service
+systemctl start udisks2.service
+systemctl start udisks2
