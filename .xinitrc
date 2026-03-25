@@ -9,6 +9,4 @@ udiskie --no-tray &
 xwallpaper --zoom ~/Images/wallpapers/chasers.jpg &
 picom --config ~/.config/picom/picom.conf &
 
-/usr/bin/st &
-
 exec dwm
