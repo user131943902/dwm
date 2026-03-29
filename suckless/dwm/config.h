@@ -15,20 +15,31 @@ static int swallowfloating    = 0;        /* 1 means swallow floating windows by
 static int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static int showbar            = 1;        /* 0 means no bar */
 static int topbar             = 1;        /* 0 means bottom bar */
-static char *fonts[]          = { "monospace:size=10", "NotoColorEmoji:pixelsize=10:antialias=true:autohint=true"  };
-static char normbgcolor[]           = "#222222";
-static char normbordercolor[]       = "#444444";
-static char normfgcolor[]           = "#bbbbbb";
-static char selfgcolor[]            = "#ffffff";
-static char selbordercolor[]        = "#005577";
-static char selbgcolor[]            = "#005577";
+static char *fonts[]          = { "JetBrains Mono Nerd Font:size=10", "NotoColorEmoji:pixelsize=10:antialias=true:autohint=true" };
 
 /* bar colors */
 static const char *colors[][3] = {
-    /*               fg        bg        border */
-    [SchemeNorm] = { "#bbbbbb", "#222222", "#222222" },  // inactive windows / normal
-    [SchemeSel]  = { "#ffffff", "#005577", "#005577" },  // focused / selected
+       [SchemeNorm] = { "#ffffff", "#000000", "#000000" }, /* workspace mode + dwmblocks ¦ statusbar background ¦ inactive border color*/
+       [SchemeSel]  = { "#005577", "#000000", "#005577" }, /* selected window + window name ¦ selected workspace bg ¦ border color */
 };
+
+/* these are now non-const pointers, initialized at runtime */
+static char *normfgcolor;
+static char *normbgcolor;
+static char *normbordercolor;
+static char *selfgcolor;
+static char *selbgcolor;
+static char *selbordercolor;
+
+/* initialize in maim or some setup function */
+void setup_colors(void) {
+       normfgcolor   = (char *)colors[SchemeNorm][0];
+       normbgcolor   = (char *)colors[SchemeNorm][1];
+       normbordercolor = (char *)colors[SchemeNorm][2];
+       selfgcolor    = (char *)colors[SchemeSel][0];
+       selbgcolor    = (char *)colors[SchemeSel][1];
+       selbordercolor = (char *)colors[SchemeSel][2];
+}
 
 /* alpha values (for transparency) */
 static const unsigned int baralpha  = 0xCC;   /* background alpha */
@@ -192,7 +203,7 @@ static const Key keys[] = {
 	{ MODKEY,			XK_a,          togglegaps,             {0} },
 	{ MODKEY|ShiftMask,		XK_a,          defaultgaps,            {0} },
 	// { MODKEY,			XK_s,          togglesticky,           {0} },
-	{ MODKEY,			XK_d,          spawn,                  {.v = (const char*[]){ "dmenu_run", NULL } } },
+	{ MODKEY, XK_d, spawn, {.v = (const char*[]){ "dmenu_run", "-nb", "#000000", "-nf", "#FFFFFF", "-fn", "JetBrains Mono Nerd Font-10", NULL } } },
 	{ MODKEY|ShiftMask,		XK_d,          spawn,                  {.v = (const char*[]){ "passmenu", NULL } } },
 	{ MODKEY,			XK_f,          togglefullscr,          {0} },
 	{ MODKEY|ShiftMask,		XK_f,          setlayout,              {.v = &layouts[8]} },
