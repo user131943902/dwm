@@ -1,0 +1,35 @@
+[colors]
+[colors.primary]
+background = "#000000"
+foreground = "#c5c8c6"
+
+[colors.normal]
+black   = "#1d1f21"
+red     = "#cc6666"
+green   = "#b5bd68"
+yellow  = "#f0c674"
+blue    = "#81a2be"
+magenta = "#b294bb"
+cyan    = "#8abeb7"
+white   = "#c5c8c6"
+
+[colors.bright]
+black   = "#969896"
+red     = "#cc6666"
+green   = "#b5bd68"
+yellow  = "#f0c674"
+blue    = "#81a2be"
+magenta = "#b294bb"
+cyan    = "#8abeb7"
+white   = "#ffffff"
+
+[font]
+normal = { family = "JetBrains Mono Nerd Font", style = "Regular" }
+size = 10.0
+
+[cursor]
+style = { shape = "Beam", blinking = "Always"}
+
+[window.padding]
+x = 5
+y = 5
