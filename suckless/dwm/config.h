@@ -125,7 +125,7 @@ static const Layout layouts[] = {
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 /* commands */
-static const char *termcmd[]  = { "sh", "-c", "cd \"$HOME\" && exec st", NULL };
+static const char *termcmd[]  = { "sh", "-c", "cd \"$HOME\" && exec " TERMINAL, NULL };
 
 /*
  * Xresources preferences to load at startup
