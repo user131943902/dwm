@@ -20,7 +20,7 @@ static char *fonts[]          = { "JetBrains Mono Nerd Font:size=10", "NotoColor
 /* bar colors */
 static const char *colors[][3] = {
        [SchemeNorm] = { "#ffffff", "#000000", "#000000" }, /* workspace mode + dwmblocks ¦ statusbar background ¦ inactive border color*/
-       [SchemeSel]  = { "#005577", "#000000", "#005577" }, /* selected window + window name ¦ selected workspace bg ¦ border color */
+       [SchemeSel]  = { "#ffffff", "#000000", "#005577" }, /* selected window + window name ¦ selected workspace bg ¦ border color */
 };
 
 /* these are now non-const pointers, initialized at runtime */
