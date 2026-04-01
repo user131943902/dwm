@@ -2,9 +2,6 @@
 static const Block blocks[] = {
 	/* {"",	"~/.local/bin/statusbar/sb-memory",	10,	14}, */
 	/* {"",	"~/.local/bin/statusbar/sb-cpu",		10,	18}, */
-	{"",	"~/.local/bin/statusbar/sb-brightness",	0,	10},
-	{"",	"~/.local/bin/statusbar/sb-volume",	0,	10},
-	{"",	"~/.local/bin/statusbar/sb-battery",	5,	3},
 	{"",	"~/.local/bin/statusbar/sb-clock",	60,	1},
 };
 
