@@ -3,7 +3,7 @@
 /* Constants */
 #define TERMINAL "alacritty"
 #define TERMCLASS "Alacritty"
-#define BROWSER "firefox"
+#define BROWSER "zen-browser"
 /* appearance */
 static unsigned int borderpx  = 2;        /* border pixel of windows */
 static unsigned int snap      = 32;       /* snap pixel */
@@ -19,8 +19,8 @@ static char *fonts[]          = { "JetBrains Mono Nerd Font:size=10", "NotoColor
 
 /* bar colors */
 static const char *colors[][3] = {
-       [SchemeNorm] = { "#ffffff", "#000000", "#000000" }, /* workspace mode + dwmblocks ¦ statusbar background ¦ inactive border color*/
-       [SchemeSel]  = { "#ffffff", "#000000", "#005577" }, /* selected window + window name ¦ selected workspace bg ¦ border color */
+       [SchemeNorm] = { "#c5c8c6", "#000000", "#000000" }, /* workspace mode + dwmblocks ¦ statusbar background ¦ inactive border color*/
+       [SchemeSel]  = { "#c5c8c6", "#000000", "#222d32" }, /* selected window + window name ¦ selected workspace bg ¦ border color */
 };
 
 /* these are now non-const pointers, initialized at runtime */
@@ -78,7 +78,7 @@ static const Rule rules[] = {
 	/* class    instance       title       	 tags mask    isfloating   isterminal  noswallow  monitor */
 	{ "Gimp",     NULL,        NULL,           1 << 8,      0,           0,          0,         -1 },
 	{ TERMCLASS,  NULL,        NULL,       	 0,           0,           1,          0,         -1 },
-	{ NULL,       NULL,        "Event Tester", 0,          0,           0,          1,         -1 },
+	{ NULL,       NULL,        "Event Tester", 0,           0,           0,          1,         -1 },
 	{ TERMCLASS,  "floatterm", NULL,       	 0,           1,           1,          0,         -1 },
 	{ TERMCLASS,  "bg",        NULL,       	 1 << 7,      0,           1,          0,         -1 },
 	{ TERMCLASS,  "spterm",    NULL,       	 SPTAG(0),    1,           1,          0,         -1 },
@@ -208,7 +208,7 @@ static const Key keys[] = {
 	{ MODKEY,			XK_a,          togglegaps,             {0} },
 	{ MODKEY|ShiftMask,		XK_a,          defaultgaps,            {0} },
 	// { MODKEY,			XK_s,          togglesticky,           {0} },
-	{ MODKEY, XK_d, spawn, {.v = (const char*[]){ "dmenu_run", "-nb", "#000000", "-nf", "#FFFFFF", "-fn", "JetBrains Mono Nerd Font-10", NULL } } },
+	{ MODKEY, XK_d, spawn, {.v = (const char*[]){ "dmenu_run", "-nb", "#000000", "-nf", "#c5c8c6", "-sb", "#222d32", "-sf", "#c5c8c6", "-fn", "JetBrains Mono Nerd Font-10", NULL } } },
 	{ MODKEY|ShiftMask,		XK_d,          spawn,                  {.v = (const char*[]){ "passmenu", NULL } } },
 	{ MODKEY,			XK_f,          togglefullscr,          {0} },
 	{ MODKEY|ShiftMask,		XK_f,          setlayout,              {.v = &layouts[8]} },
