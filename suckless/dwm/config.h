@@ -205,7 +205,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_a,          defaultgaps,            {0} },
 	// { MODKEY,				XK_s,          togglesticky,           {0} },
 	// { MODKEY,                	XK_d,          spawn,		    {.v = (const char*[]){ "dmenu_run", "-nb", "#000000", "-nf", "#c5c8c6", "-sb", "#222d32", "-sf", "#c5c8c6", "-fn", "JetBrains Mono Nerd Font-10", NULL } } },
-	{ MODKEY, 			XK_d, 		 spawn,  	   	    {.v = (const char*[]){ "rofi" "-show" "drun", NULL } } },
+	{ MODKEY, 			XK_d, 		 spawn,  	   	    {.v = (const char*[]){ "rofi", "-show", "drun", NULL } } },
 	{ MODKEY,			XK_f,          togglefullscr,          {0} },
 	{ MODKEY|ShiftMask,		XK_f,          setlayout,              {.v = &layouts[8]} },
 	{ MODKEY,			XK_g,          shiftview,              { .i = -1 } },
