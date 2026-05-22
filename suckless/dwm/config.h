@@ -165,7 +165,8 @@ ResourcePref resources[] = {
 #include "shiftview.c"
 
 static const Key keys[] = {
-	/* modifier                     key            function                argument */
+	/* modifier                 key            function                argument */
+	STACKKEYS(MODKEY, 				 focus)
 	TAGKEYS(			XK_1,          0)
 	TAGKEYS(			XK_2,          1)
 	TAGKEYS(			XK_3,          2)
@@ -219,8 +220,8 @@ static const Key keys[] = {
 	{ MODKEY,			XK_Return,     spawn,                  {.v = termcmd } },
 	// { MODKEY|ShiftMask,		XK_Return,     togglescratch,          {.ui = 0} },
 
-	{ MODKEY,			XK_z,          incrgaps,               {.i = +3 } },
-	{ MODKEY,			XK_x,          incrgaps,               {.i = -3 } },
+	{ MODKEY,			XK_z,          incrgaps,               {.i = +2.5 } },
+	{ MODKEY,			XK_x,          incrgaps,               {.i = -2.5 } },
 	{ MODKEY,			XK_b,          togglebar,              {0} },
 
 	{ MODKEY,			XK_Page_Up,    shiftview,              { .i = -1 } },
